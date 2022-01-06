@@ -1,0 +1,6 @@
+(define (do-bangs del-time count)
+  ;(post "do-bangs" count)
+  (out 0 'bang)
+  (if (> count 1)
+    (delay del-time (lambda ()(do-bangs del-time (- count 1))))))
+(post "main.scm loaded")
